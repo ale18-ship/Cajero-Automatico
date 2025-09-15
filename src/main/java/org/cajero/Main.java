@@ -31,7 +31,20 @@ public class Main {
                         System.out.println("Usuario no encontrado.");
                     }
                     break;
-                case 2, 3:
+                case 2:
+                    System.out.print("Ingresa el ID del usuario: ");
+                    int idDep = sc.nextInt();
+                    Usuario u2 = cajero.buscarUsuario(idDep);
+                    if (u2 != null) {
+                        System.out.print("Monto a depositar: ");
+                        double monto = sc.nextDouble();
+                        u2.getCuenta().depositar(monto);
+                        System.out.println("Depósito exitoso. Saldo actual: " + u2.getCuenta().getSaldo());
+                    } else {
+                        System.out.println("Usuario no encontrado.");
+                    }
+                    break;
+                case 3:
                     // lógica pendiente
                     break;
                 case 4:
