@@ -45,7 +45,20 @@ public class Main {
                     }
                     break;
                 case 3:
-                    // lógica pendiente
+                    System.out.print("Ingresa el ID del usuario: ");
+                    int idRet = sc.nextInt();
+                    Usuario u3 = cajero.buscarUsuario(idRet);
+                    if (u3 != null) {
+                        System.out.print("Monto a retirar: ");
+                        double monto = sc.nextDouble();
+                        if (u3.getCuenta().retirar(monto)) {
+                            System.out.println("Retiro exitoso. Saldo actual: " + u3.getCuenta().getSaldo());
+                        } else {
+                            System.out.println("Saldo insuficiente.");
+                        }
+                    } else {
+                        System.out.println("Usuario no encontrado.");
+                    }
                     break;
                 case 4:
                     System.out.println("¡Gracias por usar el cajero!");
