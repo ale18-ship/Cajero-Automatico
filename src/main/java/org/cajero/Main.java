@@ -7,8 +7,15 @@ public class Main {
         Cajero cajero = new Cajero();
         Scanner sc = new Scanner(System.in);
 
-        cajero.agregarUsuario(new Usuario("Juan", 1, 1000));
-        cajero.agregarUsuario(new Usuario("Maria", 2, 500));
+        Usuario juan = new Usuario("Juan", 1, 1000);
+        Usuario maria = new Usuario("Maria", 2, 500);
+        Usuario pedro = new Usuario("Pedro", 3, 2000);
+        Usuario ana = new Usuario("Ana", 4, 1500);
+
+        cajero.agregarUsuario(juan);
+        cajero.agregarUsuario(maria);
+        cajero.agregarUsuario(pedro);
+        cajero.agregarUsuario(ana);
 
         int opcion;
         do {
