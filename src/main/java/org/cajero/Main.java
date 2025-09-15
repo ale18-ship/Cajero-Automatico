@@ -21,7 +21,17 @@ public class Main {
             opcion = sc.nextInt();
 
             switch (opcion) {
-                case 1, 2, 3:
+                case 1:
+                    System.out.print("Ingresa el ID del usuario: ");
+                    int idConsulta = sc.nextInt();
+                    Usuario u1 = cajero.buscarUsuario(idConsulta);
+                    if (u1 != null) {
+                        System.out.println("Saldo de " + u1.getNombre() + ": " + u1.getCuenta().getSaldo());
+                    } else {
+                        System.out.println("Usuario no encontrado.");
+                    }
+                    break;
+                case 2, 3:
                     // lógica pendiente
                     break;
                 case 4:
